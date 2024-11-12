@@ -1,3 +1,7 @@
+### Course materials
+
+- https://github.com/ned1313/Deep-Dive-Terraform/tree/main
+
 # Terraform Study Notes
 
 - TF is idempotent -- applying the same config multiple times will not change the outcome.
