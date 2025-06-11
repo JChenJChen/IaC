@@ -1,0 +1,6 @@
+resource "google_project" "existing" {
+  project_id      = var.project_id
+  name            = var.name
+  billing_account = "0107FA-89AC57-0B811C"
+  # (leave billing_account/org_id/etc. out for the first import)
+}

@@ -1,6 +1,0 @@
-terraform-access-key
-
-.terraform/*
-terraform.tfstate
-terraform.tfstate.*
-.terraform.tfstate.lock.info
