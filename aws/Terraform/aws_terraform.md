@@ -14,8 +14,14 @@ https://spacelift.io/blog/terraform-tutorial
       1. username = 'terraform-user'
       2. tag = 'terraform'
       3. create access key
+3. install `jq`
 
 terraform provider
 | Provider | Version Constraint | terraform init (no lock file) | terraform init (lock file) |
 |----------|--------------------|-------------------------------|----------------------------|
 | aws      | >= 4.5.0           | Latest version (e.g. 5.55.0)  | Lock file version (4.5.0)  |
+
+
+> Following Quick Start Steps generated in [GitHub CoPilot chat](https://github.com/copilot/c/771fae9c-b705-4744-a1f7-02e8ff0231bb)
+
+4. 

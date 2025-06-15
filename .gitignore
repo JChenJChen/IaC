@@ -6,3 +6,4 @@ terraform-access-key
 .terraform.tfstate.lock.info
 .terraform.lock.hcl
 terraform-access-key
+temp-creds.json
