@@ -1,0 +1,54 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Bootstrap IAM admin user + password policy
+
+Resources:
+  AdminUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: bootstrap-admin
+
+  AdminAccessKey:
+    Type: AWS::IAM::AccessKey
+    Properties:
+      # Generates an AccessKey/SecretKey pair for AdminUser
+      UserName: !Ref AdminUser
+    # CAUTION: The SecretAccessKey will be visible in the CloudFormation Outputs
+
+  AdminUserAttachPolicy:
+    Type: AWS::IAM::UserToGroupAddition
+    Properties:
+      # Alternatively, you could use AWS::IAM::ManagedPolicy or inline policies.
+      Users:
+        - !Ref AdminUser
+      Groups:
+        - !Ref AdminGroup
+
+  AdminGroup:
+    Type: AWS::IAM::Group
+    Properties:
+      GroupName: bootstrap-admins
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AdministratorAccess
+
+  AccountPasswordPolicy:
+    Type: AWS::IAM::AccountPasswordPolicy
+    Properties:
+      MinimumPasswordLength: 14
+      RequireSymbols: true
+      RequireNumbers: true
+      RequireUppercaseCharacters: true
+      RequireLowercaseCharacters: true
+      RequireLowercaseCharacters: true
+      AllowUsersToChangePassword: true
+      MaxPasswordAge: 90
+      PasswordReusePrevention: 5
+
+Outputs:
+  AdminAccessKeyId:
+    Description: The new admin user’s Access Key ID
+    Value: !Ref AdminAccessKey
+  AdminSecretAccessKey:
+    Description: The new admin user’s Secret Access Key
+    Value: !GetAtt AdminAccessKey.SecretAccessKey
+    Export:
+      Name: AdminSecretAccessKey

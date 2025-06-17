@@ -1,0 +1,35 @@
+AWSTemplateFormatVersion: '2025-06-11'
+Description: Create an IAM admin user and group with AdministratorAccess
+
+Resources:
+  AdminGroup:
+    Type: AWS::IAM::Group
+    Properties:
+      GroupName: admin-group
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AdministratorAccess
+
+  AdminUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: admin-user
+      Groups:
+        - !Ref AdminGroup
+
+  AdminUserAccessKey:
+    Type: AWS::IAM::AccessKey
+    Properties:
+      UserName: !Ref AdminUser
+
+Outputs:
+  AdminUserName:
+    Description: Name of the admin user
+    Value: !Ref AdminUser
+
+  AdminAccessKeyId:
+    Description: Access key ID for the admin user
+    Value: !Ref AdminUserAccessKey
+
+  AdminSecretAccessKey:
+    Description: Secret access key for the admin user (visible only at stack creation!)
+    Value: !GetAtt AdminUserAccessKey.SecretAccessKey

@@ -1,0 +1,27 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowCFNAndIAM",
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:CreateStack",
+        "cloudformation:DescribeStacks",
+        "cloudformation:UpdateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:ListStacks",
+        "cloudformation:CreateChangeSet",
+        "iam:CreateUser",
+        "iam:CreateGroup",
+        "iam:CreatePolicy",
+        "iam:CreateAccessKey",
+        "iam:AttachUserPolicy",
+        "iam:PutUserPolicy",
+        "iam:PutAccountPasswordPolicy",
+        "iam:DeleteUser",
+        "iam:DeleteAccessKey"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

@@ -16,6 +16,6 @@ resource "aws_budgets_budget" "monthly_budget" {
     notification_type          = "ACTUAL"
     threshold                  = 80
     threshold_type             = "PERCENTAGE"
-    subscriber_email_addresses = ["your-email@example.com"] # <-- Replace with your email
+    subscriber_email_addresses = ["colorcowcompany@gmail.com"] # <-- Replace with your email
   }
 }

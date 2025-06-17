@@ -74,7 +74,7 @@ module "vpc" {
   ]
   subnets = [
     {
-      name          = "indevets-subnet"
+      name          = "subnet"
       ip_cidr_range = "10.30.0.0/16"
       region        = local.region
     }
