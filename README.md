@@ -13,4 +13,3 @@ This repo focuses on:
   - Terraform -- for both providers
   - CloudFormation -- only for AWS
 
-<!-- - `/.github/workflows`: workflow with GitHub actions that run Terraform cmds (init, plan, apply) -->
