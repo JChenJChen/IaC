@@ -31,17 +31,17 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
-        working-directory: aws/Terraform/aws_copilot
+        working-directory: terraform/terraform-aws/aws-copilot
 
       - name: Terraform Plan
         run: terraform plan
-        working-directory: aws/Terraform/aws_copilot
+        working-directory: terraform/terraform-aws/aws-copilot
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply
         # run: terraform apply -auto-approve
-        working-directory: aws/Terraform/aws_copilot
+        working-directory: terraform/terraform-aws/aws-copilot
 
 # jobs:
 #   deploy:
