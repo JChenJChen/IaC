@@ -7,3 +7,8 @@ terraform-access-key
 .terraform.lock.hcl
 terraform-access-key
 temp-creds.json
+
+# temporary:
+# git cloned repos for test-driving
+add-asg-lb-cloudformation
+viya4-iac-aws
