@@ -1,5 +1,16 @@
-# Terraform
+# IaC
 
-Study materials:
-- https://collabnix.github.io/terraform/
-- https://github.com/ned1313/Deep-Dive-Terraform/tree/main
+
+Infrastructure-as-Code is the method of deploying and managing infrastructure declaratively with metadata, and ideally automatically applied with CI/CD (continuous integration/deployment) pipeline.
+
+
+This repo focuses on:
+
+- cloud infra providers:
+  - GCP
+  - AWS
+- IaC tools:
+  - Terraform -- for both providers
+  - CloudFormation -- only for AWS
+
+<!-- - `/.github/workflows`: workflow with GitHub actions that run Terraform cmds (init, plan, apply) -->

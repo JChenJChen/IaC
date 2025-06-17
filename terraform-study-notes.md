@@ -1,8 +1,5 @@
-### Course materials
-
-- https://github.com/ned1313/Deep-Dive-Terraform/tree/main
-
 # Terraform Study Notes
+
 
 - TF is idempotent -- applying the same config multiple times will not change the outcome.
 
@@ -108,3 +105,11 @@ resource "terraform_data" "example" {
 
 - resources, data sources, outputs
 - state should be encryted at rest & transit
+
+## REFS
+
+#### Course materials
+
+- https://collabnix.github.io/terraform/
+- https://github.com/ned1313/Deep-Dive-Terraform/tree/main
+
