@@ -258,18 +258,6 @@ terraform output admin_secret_access_key
 
 ---
 
-## 7. Summary Table
-
-| Task                        | IaC Supported? | Terraform CLI Supported? | Console Required? | Notes |
-|-----------------------------|:-------------:|:-----------------------:|:-----------------:|-------|
-| IAM Users/Groups/Policies   | ✅            | ✅                      | ❌                | MFA for users can be enforced via policy, but actual device registration is manual. |
-| MFA for Root                | ❌            | ❌                      | ✅                | Must be done in the Console. |
-| Budget Alerts               | ✅            | ✅                      | ❌                | Some billing/account setup may require console. |
-| Networking (VPC, Subnets)   | ✅            | ✅                      | ❌                | Fully supported by IaC/CLI. |
-| Account Settings/Contacts   | ❌            | ❌                      | ✅                | Must be done manually. |
-
----
-
 ## 8. File Structure
 
 ```
