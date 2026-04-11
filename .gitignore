@@ -1,5 +1,12 @@
-terraform-access-key
+**/.DS_Store
 
+# AWS
+**/.aws/
+**/.aws/credentials
+**/.aws/config
+
+
+# Terraform
 **/.terraform/
 *.tfstate
 *.tfstate.*
@@ -8,8 +15,10 @@ terraform-access-key
 terraform-access-key
 temp-creds.json
 
+
 # attempt to terraform import existing GCP project, decided against for now
 project.tf.bkp
+
 
 # temporary:
 # git cloned repos for test-driving
